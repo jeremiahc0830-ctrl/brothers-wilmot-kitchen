@@ -1,61 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brothers Wilmot Kitchen | Modern & Fresh</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap');
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="wood-bg text-zinc-100 font-sans selection:bg-amber-800">
 
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold tracking-tight text-gray-900">Brothers Wilmot Kitchen</h1>
-            <nav class="space-x-6 hidden md:flex font-medium text-gray-600">
-                <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#catering" class="hover:text-blue-600">Catering</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Overlay to ensure clean readability over the wood texture -->
+    <div class="bg-zinc-950/85 min-h-screen">
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20 px-6 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Exceptional Food, Community, & Brews</h2>
-            <p class="text-lg text-gray-300 mb-8">Bringing gourmet kitchen concepts and full-service catering right to your next event or gathering.</p>
-            <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-blue-500 transition">Get in Touch</a>
-        </div>
-    </section>
+        <!-- Header / Navigation Bar -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <!-- Logo Mark -->
+                    <div class="w-10 h-10 rounded-full bg-red-900 border border-amber-600/40 flex items-center justify-center font-serif font-bold text-amber-200 text-lg shadow-inner">
+                        BW
+                    </div>
+                    <span class="font-serif text-xl tracking-wider uppercase text-amber-100">Brothers Wilmot</span>
+                </div>
+                <nav class="space-x-8 hidden md:flex text-xs tracking-[0.25em] uppercase text-zinc-400 font-medium">
+                    <a href="#about" class="hover:text-amber-200 transition">About</a>
+                    <a href="#menu" class="hover:text-amber-200 transition">Menus</a>
+                    <a href="#catering" class="hover:text-amber-200 transition">Parties</a>
+                    <a href="#connections" class="hover:text-amber-200 transition">Connections</a>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Catering Card Section -->
-    <main class="max-w-6xl mx-auto px-6 py-16">
-        <div class="bg-white rounded-2xl shadow-md p-8 md:p-12 border border-gray-100 grid md:grid-cols-2 gap-8 items-center">
-            <div>
-                <span class="text-blue-600 font-semibold uppercase tracking-wider text-sm">Special Services</span>
-                <h3 class="text-3xl font-bold text-gray-900 mt-2 mb-4">Full Service Catering Available</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    From small dinner parties to large celebrations like New Year's Eve or Super Bowl parties, we have your food covered. All catering orders come plated on disposable platters with everything included.
+        <!-- Hero Section -->
+        <section class="relative pt-44 pb-28 px-6 text-center border-b border-zinc-800/80">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <span class="text-xs uppercase tracking-[0.4em] text-amber-300/80 font-semibold">Woodstock, Georgia</span>
+                <h1 class="font-serif text-5xl md:text-7xl font-normal tracking-tight text-amber-50">Exceptional Food, Community, & Brews</h1>
+                <p class="text-zinc-300 font-light text-lg max-w-2xl mx-auto leading-relaxed">
+                    Bringing gourmet kitchen concepts, signature deviled eggs, fresh flatbreads, and full-service catering to your next gathering.
                 </p>
-                <div class="space-y-2 text-gray-700">
-                    <p><strong>Contact:</strong> John Wilmot</p>
-                    <p><strong>Phone:</strong> 770.715.8591</p>
-                    <p><strong>Email:</strong> John@BrothersWilmot.com</p>
+                <div class="pt-4">
+                    <a href="#connections" class="inline-block border border-amber-500/50 text-amber-200 px-8 py-4 text-xs uppercase tracking-[0.25em] hover:bg-amber-600 hover:text-white transition duration-300 shadow-lg">Get in Touch</a>
                 </div>
             </div>
-            <div class="bg-gray-100 rounded-xl p-6 text-center">
-                <h4 class="font-bold text-xl text-gray-800 mb-2">Connect With Us</h4>
-                <p class="text-gray-600 text-sm mb-4">Follow social media for updates on events, menu changes, and specials!</p>
-                <p class="text-blue-600 font-medium">FB & Instagram: @BrothersWilmot</p>
-            </div>
-        </div>
-    </main>
+        </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-white border-t border-gray-200 py-8 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 Brothers Wilmot LLC. All rights reserved.</p>
-    </footer>
+        <!-- Main Content Container -->
+        <main class="max-w-6xl mx-auto px-6 py-20 space-y-28">
 
+            <!-- Menu Highlights Section -->
+            <section id="menu" class="space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="text-xs uppercase tracking-[0.3em] text-amber-400">Fresh & Handcrafted</span>
+                    <h2 class="font-serif text-4xl text-amber-100">Our Signature Menu</h2>
+                    <p class="text-zinc-400 text-sm max-w-md mx-auto">Prepared fresh daily with premium ingredients and bold flavors.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Menu Item Card 1 -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl shadow-xl backdrop-blur-sm space-y-3">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-serif text-2xl text-amber-200">Shorty's Deviled Eggs</h3>
+                            <span class="text-amber-400 font-semibold text-sm">Signature</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed font-light">
+                            A legendary southern classic whipped to creamy perfection with secret house seasonings and savory toppings.
+                        </p>
+                    </div>
+
+                    <!-- Menu Item Card 2 -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl shadow-xl backdrop-blur-sm space-y-3">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-serif text-2xl text-amber-200">Artisan Flatbread Pizzas</h3>
+                            <span class="text-amber-400 font-semibold text-sm">Freshly Baked</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed font-light">
+                            Crispy, wood-fired style flatbreads topped with gourmet cheeses, fresh herbs, and seasonal chef pairings.
+                        </p>
+                    </div>
+
+                    <!-- Menu Item Card 3 -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl shadow-xl backdrop-blur-sm space-y-3">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-serif text-2xl text-amber-200">Warm Beer Bread</h3>
+                            <span class="text-amber-400 font-semibold text-sm">Baked In-House</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed font-light">
+                            Rich, golden-brown artisanal bread crafted using local craft beer flavors, served warm with signature spreads.
+                        </p>
+                    </div>
+
+                    <!-- Menu Item Card 4 -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl shadow-xl backdrop-blur-sm space-y-3">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-serif text-2xl text-amber-200">Event & Party Platters</h3>
+                            <span class="text-amber-400 font-semibold text-sm">Catering</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed font-light">
+                            Fully plated gourmet selections on disposable platters tailored for holiday events, parties, and corporate get-togethers.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Full Service Catering / Parties Section -->
+            <section id="catering" class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-8 md:p-14 shadow-2xl grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-amber-400">Private Gatherings</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-amber-100">Parties & Full Service Catering</h2>
+                    <p class="text-zinc-300 font-light leading-relaxed text-sm">
+                        From small family dinner parties to large celebrations like New Year's Eve or gameday gatherings, we handle the food so you can enjoy the moment. Every order arrives completely prepped, plated on clean disposable platters with everything included.
+                    </p>
+                    <div class="pt-2 border-t border-zinc-800 space-y-2 text-sm text-zinc-300">
+                        <p><strong class="text-amber-200 font-medium">Location:</strong> Inside The Stout Brothers Woodstock Market</p>
+                        <p><strong class="text-amber-200 font-medium">Address:</strong> 240 Chambers Street, Woodstock, GA 30188</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-950/60 p-8 rounded-xl border border-zinc-800/80 space-y-4">
+                    <h3 class="font-serif text-xl text-amber-200">Direct Inquiries</h3>
+                    <p class="text-zinc-400 text-xs">Reach out directly to book your next private event or custom catering order.</p>
+                    <div class="space-y-2 text-sm text-zinc-300 pt-2 font-light">
+                        <p><strong>John Wilmot:</strong> John@BrothersWilmot.com</p>
+                        <p><strong>Ian Wilmot:</strong> Ian@BrothersWilmot.com</p>
+                        <p><strong>Phone:</strong> 770.715.8591</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Connections & Affiliates Section -->
+            <section id="connections" class="space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="text-xs uppercase tracking-[0.3em] text-amber-400">Stay Connected</span>
+                    <h2 class="font-serif text-4xl text-amber-100">Community & Affiliates</h2>
+                    <p class="text-zinc-400 text-sm max-w-md mx-auto">Follow our social channels and discover the local companies we proudly partner with.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Socials Card -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl shadow-xl space-y-4">
+                        <h3 class="font-serif text-2xl text-amber-200">Social Channels</h3>
+                        <p class="text-zinc-300 text-sm font-light">
+                            Follow our social media pages for weekly updates on events, menu changes, and daily kitchen specials!
+                        </p>
+                        <div class="pt-2 space-y-2 text-sm text-amber-300">
+                            <p><strong>Facebook & Instagram:</strong> @BrothersWilmot</p>
+                        </div>
+                    </div>
+
+                    <!-- Affiliates Card -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl shadow-xl space-y-4">
+                        <h3 class="font-serif text-2xl text-amber-200">Our Trusted Partners</h3>
+                        <div class="space-y-4 text-sm text-zinc-300 font-light">
+                            <div>
+                                <p class="font-medium text-amber-100">The Stout Brothers Woodstock Beer and Coffee Market</p>
+                                <p class="text-xs text-zinc-400">FB: Woodstock Beer Market | IG: thestoutbrotherswoodstock</p>
+                            </div>
+                            <div>
+                                <p class="font-medium text-amber-100">D&D Products</p>
+                                <p class="text-xs text-zinc-400">FB: D&D Creations, LLC | Email: DandDProducts1@yahoo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-zinc-800 bg-zinc-950 py-12 text-center text-zinc-500 text-xs tracking-widest uppercase space-y-2">
+            <p>&copy; 2026 Johnathan Wilmot, Brothers Wilmot LLC. All rights reserved.</p>
+            <p class="text-amber-400/60 lowercase tracking-normal">Crafted for modern community dining.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
